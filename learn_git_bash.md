@@ -59,7 +59,7 @@ $ git reflog
 ```
 
 ```
-$ cat + file_name
+$ cat + file
 $ cat  file1 file2 > target_file
 /*cat(print and concatenate)
 1.打印文件
@@ -67,10 +67,29 @@ $ cat  file1 file2 > target_file
 ```
 
 ```
-$ git checkout -- <file_name>
+$ git checkout -- <file>
 /*将未存入暂存区的修改撤销，即让这个文件回到最近一次git commit或git add时的状态*/
-$ git reset HEAD <file_name>
+$ git reset HEAD <file>
 /*将存入暂存区的修改回退到工作区*/
+```
+
+
+
+```
+$ rm <file>
+/*删除工作区的文件，未添加到工作区，可恢复*/
+
+$ git rm <file>
+$ git commit -m <"">
+/*从版本库里面删除文件，无法恢复*/
+```
+
+
+
+```
+$ git checkout -- <file>
+/*checkout 实质上是把版本库的文件复制到工作区
+只要文件添加到版本库了且版本库里面的文件未被删除，都可以恢复*/
 ```
 
 
