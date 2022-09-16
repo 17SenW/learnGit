@@ -58,6 +58,16 @@ $ git reflog
 /*reflog(reference log)查看所有更新分支的命令和引用*/
 ```
 
+```
+$ cat + file_name
+$ cat  file1 file2 > target_file
+/*cat(print and concatenate)
+1.打印文件
+2.合并文件*/
+```
+
+
+
 # 2. Git工作原理
 
 1.各历史工作区都有一个指针HEAD指向它
