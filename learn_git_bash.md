@@ -73,8 +73,6 @@ $ git reset HEAD <file>
 /*将存入暂存区的修改回退到工作区*/
 ```
 
-
-
 ```
 $ rm <file>
 /*删除工作区的文件，未添加到工作区，可恢复*/
@@ -84,15 +82,29 @@ $ git commit -m <"">
 /*从版本库里面删除文件，无法恢复*/
 ```
 
-
-
 ```
 $ git checkout -- <file>
 /*checkout 实质上是把版本库的文件复制到工作区
 只要文件添加到版本库了且版本库里面的文件未被删除，都可以恢复*/
 ```
 
-
+```
+$ git remote add origin git@github.com:<用户名>/<仓库名>（ssh方式拉取）
+$ git remote add origin <URL>(最后有一个.git)（http方式拉取）
+/*与远程库建立联系*/
+$ git push (-u) origin master
+/*
+将本地版本库推送到Github上
+注释:
+1.origin:origin的意思是指“远程仓库”，就是远程仓库链接的别名。git默认创建的指向这个远程代码库的标签，origin指向的就是本地的代码库托管在Github上的版本
+2.master:本地仓库名
+3.-u只在第一次提交时才用，目的是简化以后提交的流程
+*/
+$ git remote -v
+/*显示远程库信息*/
+$ git remote rm origin
+/*此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。要真正删除远程库，需要登录到GitHub，在后台页面找到删除按钮再删除。*/
+```
 
 # 2. Git工作原理
 
