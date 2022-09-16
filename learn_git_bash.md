@@ -68,7 +68,7 @@ $ cat  file1 file2 > target_file
 
 ```
 $ git checkout -- <file_name>
-/*将未存入暂存区的修改丢弃*/
+/*将未存入暂存区的修改撤销，即让这个文件回到最近一次git commit或git add时的状态*/
 $ git reset HEAD <file_name>
 /*将存入暂存区的修改回退到工作区*/
 ```
