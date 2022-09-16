@@ -46,16 +46,28 @@ $ git log (--pretty=oneline)
 ```
 
 ```
-$ git reset --hard HEAD^
+$ git reset --hard commit_id
 /*作用：回滚到某个历史工作区
 注解：
-1.HEAD指的是当前commit的ID；
-2.一个^表示往回退1个，多个可以用"~数字"
-3.此时再用git log查看日志，就没有在回退时间之后的了。若要查看之后的，可以用git reflog*/
+1.commit_id指的是某个commit的ID；
+2.此时再用git log查看日志，就没有在回退时间之后的了。若要查看之后的，可以用git reflog*/
 ```
 
 ```
 $ git reflog
-/*查看所有命令*/
+/*reflog(reference log)查看所有更新分支的命令和引用*/
 ```
 
+# 2. Git工作原理
+
+1.各历史工作区都有一个指针HEAD指向它
+
+![](pictures/learn_git_bash/1.png)
+
+2.工作区和暂存区
+
+在创建版本库的时候，Git会自动帮我们创建一个master分支，master分支存储着我们的历史文件。
+
+![](pictures/learn_git_bash/2.jpg)
+
+我们先用add把修改文件添加到暂存区(stage)，再用commit把修改一次性添加到master分支，这时如果没有其他操作，我们的工作区就“干净”了。
