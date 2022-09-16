@@ -66,6 +66,13 @@ $ cat  file1 file2 > target_file
 2.合并文件*/
 ```
 
+```
+$ git checkout -- <file_name>
+/*将未存入暂存区的修改丢弃*/
+$ git reset HEAD <file_name>
+/*将存入暂存区的修改回退到工作区*/
+```
+
 
 
 # 2. Git工作原理
