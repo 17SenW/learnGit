@@ -40,3 +40,8 @@ $ git diff + 文件名
 /*diff(diffence):查看具体更改内容*/
 ```
 
+```
+$ git log (--pretty=oneline)
+/*产看日志(加上括号里面的为每个日志显示为一行)*/
+```
+
