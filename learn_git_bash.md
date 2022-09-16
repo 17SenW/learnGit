@@ -80,4 +80,6 @@ $ cat  file1 file2 > target_file
 
 ![](pictures/learn_git_bash/2.jpg)
 
-我们先用add把修改文件添加到暂存区(stage)，再用commit把修改一次性添加到master分支，这时如果没有其他操作，我们的工作区就“干净”了。
+我们先用add把修改添加到暂存区(stage)，再用commit把修改一次性添加到master分支，这时如果没有其他操作，我们的工作区就“干净”了。
+
+注意：Git和其他管理系统不一样的是，它是存储的修改，而不是文件。所以我们每修改一次，就得把修改add入stage。
