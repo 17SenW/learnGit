@@ -111,6 +111,19 @@ $ $ git clone git@github.com:<用户名>/<仓库名>（ssh方式拉取）
 /*将远程库克隆到本地库*/
 ```
 
+```
+$ git switch -c dev
+/*创建并指向新分支dev*/
+$ git switch <branch>
+/*切换到新分支*/
+$ git branch 
+/*查看当前分支，*表示当前分支*/
+$ git merge <branch>
+/*合并指定分支到当前分支*/
+$ git branch -d <branch>
+/*删除指定分支*/
+```
+
 
 
 # 2. Git工作原理
@@ -128,3 +141,21 @@ $ $ git clone git@github.com:<用户名>/<仓库名>（ssh方式拉取）
 我们先用add把修改添加到暂存区(stage)，再用commit把修改一次性添加到master分支，这时如果没有其他操作，我们的工作区就“干净”了。
 
 注意：Git和其他管理系统不一样的是，它是存储的修改，而不是文件。所以我们每修改一次，就得把修改add入stage。
+
+3.分支原理
+
+HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。如下图：
+
+![](pictures/learn_git_bash/3.png)
+
+创建新的分支dev，其实是创建一个新指针dev，dev指向当前提交；
+
+![](pictures/learn_git_bash/4.png)
+
+这时，每提交一次，就是让dev指针向前移动一次了；
+
+![](pictures/learn_git_bash/5.png)
+
+合并分支，就是让master指向最新提交
+
+![](pictures/learn_git_bash/6.png)
